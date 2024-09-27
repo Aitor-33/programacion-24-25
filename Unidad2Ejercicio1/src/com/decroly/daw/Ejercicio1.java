@@ -65,8 +65,14 @@ public class Ejercicio1 {
 		
 		System.out.println("el porcentaje es:"+(precio1 / precio2 *100)+"%");
 //EJERCICIO 7
+		Scanner millas = new Scanner(System.in);
 		
+		System.out.println("introduzca las millas:");
 		
+		double vmillas = millas.nextDouble();
+		
+		System.out.println("son: "+(vmillas * 1.852)+ " metros");
+//EJERCICO 8		
 		
 		
 	
