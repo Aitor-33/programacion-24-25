@@ -64,12 +64,13 @@ public class Ejercicio1 {
 		double precio2 = porcentaje2.nextDouble();
 		
 		System.out.println("el porcentaje es:"+(precio1 / precio2 *100)+"%");
+//EJERCICIO 7
 		
 		
 		
 		
 	
-		//pagina 23 area de circunferencia
+
 		
 		
 		

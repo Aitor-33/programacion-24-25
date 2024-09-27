@@ -1,0 +1,23 @@
+
+package com.decroly.daw;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//EJERCICIO 1
+		
+		System.out.println("Buenos dias");
+
+		int lado1 = 5;
+		int lado2 = 5;
+		
+		System.out.println("el area del cuadrado es:"+(lado1 * lado2));
+		
+		
+		
+		
+		
+	}
+
+}

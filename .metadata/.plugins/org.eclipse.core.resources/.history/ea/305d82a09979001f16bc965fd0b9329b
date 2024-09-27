@@ -1,0 +1,31 @@
+
+package com.decroly.daw;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//EJERCICIO 1
+		
+		System.out.println("Buenos dias");
+//EJERCICIO 2
+		int lado1 = 5;
+		int lado2 = 5;
+		
+		System.out.println("el area del cuadrado es:"+(lado1 * lado2));
+//EJERCICIO 3		
+		Scanner reader = new Scanner(System.in);
+				
+		int lado =	reader.nextInt();
+		
+		System.out.println("el area del segundo cuadrado es:"+(lado * lado));
+		
+		//pagina 23 area de circunferencia
+		
+		
+		
+	}
+
+}
