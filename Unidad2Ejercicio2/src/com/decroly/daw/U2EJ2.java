@@ -96,8 +96,56 @@ public class U2EJ2 {
 		if (nota > 10) {
 			System.out.println("las notas son de 0 a 10 introduzca un valor correcto");
 		}
+//EJERCICIO 8 
+
 		
-//pagina 4 ejercicio 7		
+		
+//EJERCICIO 9
+		
+		System.out.println("introduzca las horas:");
+		int horas = reader.nextInt();
+		System.out.println("introduzca los minutos:");
+		int minutos = reader.nextInt();
+		System.out.println("introduzca los segundos:");
+		int segundos = reader.nextInt();
+		segundos ++;
+		if (segundos>= 60) {
+			minutos ++;
+			segundos = 0;
+			
+			
+		if (minutos >= 60) {
+			horas ++;
+			minutos = 0;
+			
+		}
+		}
+		
+		System.out.println(horas);
+		System.out.println(minutos);
+		System.out.println(segundos);
+//EJERCICIO 10	
+		
+		int contador = 0;
+        boolean negativo = false;
+        System.out.print("Introduce un numero no nulo: ");
+        int numero = reader.nextInt();
+        while (contador < 10) {
+
+            
+        }
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
