@@ -218,12 +218,54 @@ public class U2EJ2 {
 		System.out.println("la suma de los primeros 10 numeros naturales es:");
 		int suma = 1+2+3+4+5+6+7+8+9+10;
 		System.out.println(suma);
+		
 		System.out.println("el producto de los primeros 10 numeros naturales es:");
 		int producto = 1*2*3*4*5*6*7*8*9*10;
 		
 		System.out.println(producto);
 		
 //EJERCICIO 14
+//Escribe un programa que calcula el salario neto semanal de un trabajador en función del
+//número de horas trabajadas y la tasa de impuestos de acuerdo a las siguientes hipótesis:
+//• Las primeras 35 horas se pagan a tarifa normal.
+//• Las horas que pasen de 35 se pagan a 1,5 veces la tarifa normal.
+//• Las tasas de impuestos son:
+//• Los primeros 500 euros son libres de impuestos.
+//• Los siguientes 400 tienen un 25% de impuestos.
+//• Los restantes un 45% de impuestos.
+//Escribir nombre, salario bruto, tasas y salario neto.		
+		
+		double tarifa;
+		int horas1;
+		int horasmas;
+		double salarioBruto = 0;
+		double salarioNeto = 0;
+		double salarioNetoplus = 0;
+		System.out.println("introduce la tarifa:");
+		tarifa = reader.nextInt();
+		horas1 = reader.nextInt();
+		
+		if (horas1 > 35){
+			horasmas = horas1 - 35;
+			salarioBruto = horasmas * 1.5 * tarifa + 35 * tarifa;
+			System.out.println("el salario bruto es:" + salarioBruto);
+		}
+		else {
+			salarioBruto = horas1 * tarifa;
+			System.out.println("el salario bruto es:" + salarioBruto);
+		}
+		if (salarioBruto < 500) {
+			salarioNeto = salarioBruto;
+			System.out.println("el salario neto es:" + salarioNeto);
+		}
+		if (salarioBruto > 900) {
+			salarioNetoplus = salarioBruto - 900 * 0.45;
+			System.out.println("el salario neto es:" + salarioNetoplus);
+		}
+		else {
+			salarioNeto = salarioBruto - 500 * 0.25;
+			System.out.println("el salario neto es:" + salarioNeto);
+		}
 		
 		
 		
