@@ -127,25 +127,103 @@ public class U2EJ2 {
 //EJERCICIO 10	
 		
 		int contador = 0;
-        boolean negativo = false;
-        System.out.print("Introduce un numero no nulo: ");
-        int numero = reader.nextInt();
+        boolean haynegativos= false;
         while (contador < 10) {
-
+        	 System.out.print("Introduce un numero no nulo: ");
+        	int numero = reader.nextInt();
             
-        }
+        	while (numero == 0) {
+        		System.out.println("el numero introducido es nulo");
+        		numero = reader.nextInt();	
+        			
+        	}
+        	
+        	if (numero<0) {
+        		haynegativos = true;
+        	}
 
+        contador ++;	
+        	
+        }
+        
+    	if (haynegativos == true) {
+    		System.out.println("hay un numero negativo");
+    	}
+
+//EJERCICIO 11	
+    	int positivos = 0;
+		int negativos = 0;
+    	int contador1 = 0;
+        boolean haynegativos1= false;
+        while (contador1 < 10) {
+        	 System.out.print("Introduce un numero no nulo: ");
+        	int numero1 = reader.nextInt();
+            positivos ++;
+            
+        	while (numero1 == 0) {
+        		System.out.println("el numero introducido es nulo");
+        		numero1 = reader.nextInt();	
+        			
+        	}
+        	
+        	if (numero1 < 0) {
+        		haynegativos1 = true;
+        		negativos ++;
+        	}
+
+        contador1 ++;	
+        	
+        }
+        
+    	if (haynegativos1 == true) {
+    		System.out.println("hay un numero negativo");
+    	}
+
+		System.out.println(positivos);
+		System.out.println(negativos);
 		
+//EJERCICIO 12
 		
+		int positivos1 = 0;
+		int negativos1 = 0;
+    	int contador2 = 0;
+    	int numero2 = 0;
+        boolean haynegativos2= false;
+        
+        do {
+        	System.out.print("Introduce un numero: ");
+        	numero2 = reader.nextInt();
+            positivos1 ++;
+            
+        	
+        	if (numero2 < 0) {
+        		haynegativos1 = true;
+        		negativos1 ++;
+        	}
+
+        	contador2 ++;
+        	
+        }while (numero2 != 0);
+
+        
+    	if (haynegativos2 == true) {
+    		System.out.println("hay un numero negativo");
+    	}
+
+		System.out.println(positivos1);
+		System.out.println(negativos1);
 		
+//EJERCICIO 13		
 		
+		System.out.println("la suma de los primeros 10 numeros naturales es:");
+		int suma = 1+2+3+4+5+6+7+8+9+10;
+		System.out.println(suma);
+		System.out.println("el producto de los primeros 10 numeros naturales es:");
+		int producto = 1*2*3*4*5*6*7*8*9*10;
 		
+		System.out.println(producto);
 		
-		
-		
-		
-		
-		
+//EJERCICIO 14
 		
 		
 		
