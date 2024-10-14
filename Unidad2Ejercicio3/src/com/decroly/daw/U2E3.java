@@ -8,11 +8,31 @@ public class U2E3 {
 		// TODO Auto-generated method stub
 Scanner reader = new Scanner(System.in);
 		//EJERCICIO 1
+		int[] billetes = {500, 200, 100, 50, 20, 10, 5};
 		
+		System.out.println("introduce una cantidad en euros que sea multiplo de 5:");
 		
+		int cantidad = reader.nextInt();
+			
+			if (cantidad % 5 != 0) {
+				
+				System.out.println("la cantidad debe de ser multiplo de 5");
+					return;
+			}
 		
+		System.out.println("para" + cantidad + "euros necesitaras:");
 		
-		
+			for (int billete : billetes) {
+				
+				if (cantidad >= billete) {
+					
+					int nBilletes = cantidad / billete;
+					
+					System.out.println(nBilletes + " billetes de " +  billete + " euros");
+					
+					cantidad %= billete;
+				}
+			}
 		
 		
 		
