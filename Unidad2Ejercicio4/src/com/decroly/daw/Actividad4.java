@@ -59,7 +59,7 @@ public class Actividad4 {
         
         double minimo = numeros2[0];
         
-        for(int l = 0; l < numeros.length; l++) {
+        for(int l = 0; l < numeros2.length; l++) {
             System.out.print("Introduce el número " + (l + 1) + ": ");
             	numeros2[l] = (int) reader.nextDouble();
         }
@@ -75,6 +75,39 @@ public class Actividad4 {
         System.out.println("El número mínimo es: " + minimo);	
 	
 		
+     //EJERCICIO 4
+        
+        Scanner reader1 = new Scanner(System.in);
+        
+        int[] numeros3 = new int[20];
+        
+        int negativos = 0;
+        int positivos = 0;
+        
+        for(int t = 0; t < numeros3.length; t++) {
+        	
+        	System.out.print("Introduce el número " + (t + 1) + ": ");
+        	numeros3[t] =  reader.nextInt();
+        }
+        		
+        for(int t = 0; t < numeros3.length; t++) {
+        	
+        	if(numeros3[t] >= 0) {
+        		positivos++;
+        	}else if(numeros3[t] < 0) {
+        		negativos++;
+        	}
+        	
+        }
+        System.out.println(negativos + positivos);
+
+        //EJERCICIO 5
+        
+        
+        
+        
+        
+        
 		}	
 	}
 
