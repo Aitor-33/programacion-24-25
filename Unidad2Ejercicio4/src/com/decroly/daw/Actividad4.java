@@ -358,6 +358,45 @@ public class Actividad4 {
         
         
         
+        //EJERCICIO12
+        
+        String [] clientes = new String [10];
+        
+		int contador = 0;
+		
+		String opcion = "";
+		
+		
+		do {
+			System.out.println("a - mostrar valores");
+			
+			System.out.println("b - introducir valor");
+			
+			System.out.println("c - salir");
+			
+			
+			opcion = reader.nextLine();
+			
+			 if(opcion.equals("a")){
+				 
+				 
+	            }
+			 
+	            else if(opcion.equals("b")){
+	            
+					 
+	            }
+			 
+
+	            else if(opcion.equals("c")){
+	                
+	            }
+			 
+	            else{
+
+	            }
+			
+		}while(!opcion.equals("c"));
         
         
         
