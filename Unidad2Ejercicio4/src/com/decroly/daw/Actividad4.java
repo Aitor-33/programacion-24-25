@@ -11,20 +11,20 @@ public class Actividad4 {
 	
 	int[] vector = new int[10];
 	
-	int i;
+	
 	
 	System.out.println("introduce los valores:");
 	
-		for(i = 0; i < vector.length; i++)
+		for(int i = 0; i < vector.length; i++) {
 			vector[i] = in.nextInt();
 
 	System.out.println("los valores introducidos son:");
-		
-		for(i = 0; i < vector.length; i++)
+		}	
+		for(int i = 0; i < vector.length; i++) {
 			
 			System.out.print(vector[i] + " ");
 		System.out.println();
-		
+		}
 //EJERCICIO 2
 		Scanner scanner = new Scanner(System.in);
         double[] numeros = new double[10];
@@ -32,14 +32,14 @@ public class Actividad4 {
         
 
         
-        for(int j = 0; j < numeros.length; j++) {
-            System.out.print("Introduce el número " + (j + 1) + ": ");
-            	numeros[j] = scanner.nextDouble();
+        for(int i = 0; i < numeros.length; i++) {
+            System.out.print("Introduce el número " + (i + 1) + ": ");
+            	numeros[i] = scanner.nextDouble();
         }
 
         
-        for(int j = 0; j < numeros.length; j++) {
-            	suma += numeros[j];
+        for(int i = 0; i < numeros.length; i++) {
+            	suma += numeros[i];
         }
 
        
@@ -59,15 +59,17 @@ public class Actividad4 {
         
         double minimo = numeros2[0];
         
-        for(int l = 0; l < numeros2.length; l++) {
-            System.out.print("Introduce el número " + (l + 1) + ": ");
-            	numeros2[l] = (int) reader.nextDouble();
+        for(int i = 0; i < numeros2.length; i++) {
+            
+        	System.out.print("Introduce el número " + (i + 1) + ": ");
+            	
+            	numeros2[i] = (int) reader.nextDouble();
         }
         
-        for(int l = 1; l < numeros2.length; l++) {
+        for(int i = 1; i < numeros2.length; i++) {
         	
-        	maximo = Math.max(maximo, numeros2[l]);
-        	minimo = Math.min(minimo, numeros2[l]);
+        	maximo = Math.max(maximo, numeros2[i]);
+        	minimo = Math.min(minimo, numeros2[i]);
         	
         }
         
@@ -84,17 +86,17 @@ public class Actividad4 {
         int negativos = 0;
         int positivos = 0;
         
-        for(int t = 0; t < numeros3.length; t++) {
+        for(int i = 0; i < numeros3.length; i++) {
         	
-        	System.out.print("Introduce el número " + (t + 1) + ": ");
-        	numeros3[t] =  reader.nextInt();
+        	System.out.print("Introduce el número " + (i + 1) + ": ");
+        	numeros3[i] =  reader.nextInt();
         }
         		
-        for(int t = 0; t < numeros3.length; t++) {
+        for(int i = 0; i < numeros3.length; i++) {
         	
-        	if(numeros3[t] >= 0) {
+        	if(numeros3[i] >= 0) {
         		positivos++;
-        	}else if(numeros3[t] < 0) {
+        	}else if(numeros3[i] < 0) {
         		negativos++;
         	}
         	
@@ -103,10 +105,94 @@ public class Actividad4 {
 
         //EJERCICIO 5
         
+        double[] numeros4 = new double[20];
+        
+        int suma2 = 0;
+        
+        for(int i = 0; i < numeros4.length; i++) {
+        	
+        	System.out.println("Introduce un numero:");
+        	
+        	numeros4[i] = reader.nextDouble();
+        }
+        
+        for(int i = 0; i < numeros4.length; i++ ) {
+        	
+        	suma2 += numeros4[i];
+        	
+        }
+        
+        System.out.println("la media es:" + (suma2 / numeros4.length));
         
         
+        //EJERCICIO 6
         
+        int n;
+        int m;
+        System.out.println("introduzca n:");
         
+        n = reader.nextInt();
+        
+        System.out.println("introduzca m:");
+        
+        m = reader.nextInt();
+        
+        int[] numeros5 = new int[n];
+        
+        for(int i = 0; i < n; i++ ) {
+        	
+        	numeros5[i] = m;
+        
+        }
+        System.out.println("El array es: ");
+        for (int value : numeros5) {
+        	System.out.println(value + " ");
+        }
+        
+       //EJERCICIO 7
+        
+        int p;
+        int q;
+        System.out.println("introduzca p:");
+        
+        p = reader.nextInt();
+        
+        System.out.println("introduzca q:");
+        
+        q = reader.nextInt(); 
+        
+        int[] numeros6 = new int[p - q];
+        
+        for(int i = 0; i < q; i++) {
+        	
+        }
+        
+       
+        int[] array1 = new int[100];
+        int[] array2 = new int[100];
+
+        
+        for (int i = 0; i < 100; i++) {
+            array1[i] = i + 1;
+        }
+
+        
+        for (int i = 0; i < 100; i++) {
+            array2[i] = array1[99 - i];
+        }
+
+        
+        System.out.println("Primer array:");
+        for (int i = 0; i < 100; i++) {
+            System.out.print(array1[i] + " ");
+        }
+        System.out.println();
+
+        
+        System.out.println("\nSegundo array (invertido):");
+        for (int i = 0; i < 100; i++) {
+            System.out.print(array2[i] + " ");
+        }
         
 		}	
 	}
