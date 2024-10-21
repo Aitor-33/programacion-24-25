@@ -167,32 +167,211 @@ public class Actividad4 {
         	
         }
         
-       
+        //EJERCICIO 8
+        
+        int conta = 0;
+
+        double[] numeros7 = new double[100];
+
+        for (int i = 0; i < numeros7.length; i++) {
+        	
+            numeros7[i] = Math.random();
+            
+        }
+
+        
+
+        System.out.print("introduce un numero entre 0 y 1:");
+
+        double o = reader.nextDouble();
+
+        for (int i = 0; i < numeros7.length; i++) {
+        	
+            if (numeros7[i] >= o) {
+            	
+                conta++;
+                
+            }
+            
+        }
+
+        System.out.println(conta + " numeros mayores o iguales a " + o);
+        
+        
+       //EJERCICIO 9
+        
+        int[] numeros8 = new int[100];
+        
+        for (int i = 0; i < numeros8.length; i++) {
+        	
+            numeros8[i] = (int)(1 + Math.random() * 10);
+            
+        }
+
+
+        System.out.print("Introduce un número entre 1 y 10: ");
+        
+        int f = reader.nextInt();
+
+        System.out.println("El número " + f + " aparece en las posiciones:");
+        
+        boolean encontrado = false;
+
+        for (int i = 0; i < numeros8.length; i++) {
+        	
+            if (numeros8[i] == f) {
+            	
+                System.out.println("Posición " + i);
+                
+                	encontrado = true;
+            }
+            
+        }
+
+        if (!encontrado) {
+        	
+            	System.out.println("El número no se encuentra en el array");
+            	
+        }
+
+        
+        //EJERCICIO 10
+        
+        in = new Scanner(System.in);
+        
+        double suma3 = 0;
+        
+        double media;
+        
+        double max;
+        
+        double min;
+        
+        int personasArriba = 0, personasAbajo = 0;
+
+
+        System.out.print("Introduce el número de personas: ");
+        
+        int S = scanner.nextInt();
+
+        double[] alturas = new double[S];
+
+        for (int i = 0; i < S; i++) {
+            System.out.print("Introduce la altura de la persona " + (i+1) + " (en metros): ");
+            alturas[i] = scanner.nextDouble();
+            suma += alturas[i];
+        }
+
+        media = suma / S;
+
+
+        max = alturas[0];
+        
+        min = alturas[0];
+
+
+        for (int i = 0; i < S; i++) {
+        	
+            if (alturas[i] > max) {
+            	
+                max = alturas[i];
+                
+            }
+            if (alturas[i] < min) {
+            	
+                min = alturas[i];
+                
+            }
+            if (alturas[i] > media) {
+            	
+                personasArriba++;
+                
+            } else if (alturas[i] < media) {
+            	
+                personasAbajo++;
+                
+            }
+        }
+
+        
+        System.out.printf("media:", media);
+        
+        System.out.printf("maxima:", max);
+        
+        System.out.printf("minima:", min);
+        
+        System.out.println("por encima de la media: " + personasArriba);
+        
+        System.out.println("por debajo de la media: " + personasAbajo);
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       //EJERCICIO 11
         int[] array1 = new int[100];
         int[] array2 = new int[100];
 
         
         for (int i = 0; i < 100; i++) {
+        	
             array1[i] = i + 1;
         }
 
         
         for (int i = 0; i < 100; i++) {
+        	
             array2[i] = array1[99 - i];
+            
         }
 
         
         System.out.println("Primer array:");
+        
         for (int i = 0; i < 100; i++) {
+        	
             System.out.print(array1[i] + " ");
+            
         }
+        
         System.out.println();
 
         
         System.out.println("\nSegundo array (invertido):");
+        
         for (int i = 0; i < 100; i++) {
+        	
             System.out.print(array2[i] + " ");
+            
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 		}	
 	}
