@@ -93,17 +93,99 @@ public class Actividad5 {
 	   		 
 	   	//EJERCICIO 4
 	   		
+	   		System.out.println("intoduce palabras: ");
+    		
+	   		 String textos4 = reader.nextLine().toLowerCase();
 	   		 
+	   		 int contadorA = 0;
 	   		 
+	   		 int contadorE = 0;
 	   		 
+	   		 int contadorI = 0;
+	   		
+	   		 int contadorO = 0;
+	   		
+	   		 int contadorU = 0;
+	   		
+	   		for(char p : textos4.toCharArray()){
+	   			 
 	   		 
+	   		if (p == 'a') {
+	   		
+	   			contadorA++;
+	   			
+	   		}
 	   		 
+	   		if(p == 'e') {
+	   			
+	   			contadorE++;
+	   			
+	   		}
+	   		
+	   		if(p == 'i') {
+	   			
+	   			contadorI++;
+	   			
+	   		}
+	   		
+	   		if(p == 'o') {
+	   			
+	   			contadorO++;
+	   			
+	   		}
+	   		if(p == 'u') {
+	   			
+	   			contadorU++;
+	   			
+	   		}
+	   		
+	   		 } 
 	   		 
+	   		System.out.println("hay " + contadorA + " a");
+	   		System.out.println("hay " + contadorE + " e");
+	   		System.out.println("hay " + contadorI + " i");
+	   		System.out.println("hay " + contadorO + " o");
+	   		System.out.println("hay " + contadorU + " u"); 
+	   		
+	   		//EJERCICIO 5
+	   		
+	   		System.out.println("intoduce las palabras: ");
+    		
+	   		 String textos5 = reader.nextLine().toLowerCase();
 	   		 
-	   		 
-	   		 
-	   		 
-	   		 
+	   		 String textos6 = textos5.replaceAll(" ", "").toLowerCase();
+	         
+	         boolean Palindromo = true;
+	         
+	         int largura = textos6.length();
+	         
+	         for (int i = 0; i < largura; i++) {
+	        	 
+	             if (textos6.charAt(i) != textos6.charAt(largura - 1 - i)) {
+	            	 
+	                 Palindromo = false;
+	                 
+	             }
+	         }
+	         
+	         if (Palindromo){
+	        	 
+	             System.out.println("es un palindromo");
+	            
+	         } else{
+	        	 
+	             System.out.println("no es un palindromo");
+	             
+	         }
+	   		
+	   		
+	   		
+	   		
+	   		
+	   		
+	   		
+	   		
+	   		
 	}
 
 }
