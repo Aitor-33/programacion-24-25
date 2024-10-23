@@ -348,7 +348,7 @@ public class Actividad4 {
         System.out.println();
 
         
-        System.out.println("\nSegundo array (invertido):");
+        System.out.println("Segundo array:");
         
         for (int i = 0; i < 100; i++) {
         	
@@ -363,6 +363,8 @@ public class Actividad4 {
         String [] clientes = new String [10];
         
 		int contador = 0;
+		
+		int enteros;
 		
 		String opcion = "";
 		
@@ -379,6 +381,11 @@ public class Actividad4 {
 			
 			 if(opcion.equals("a")){
 				 
+				 for(int i = 0; i < clientes.length; i++) {
+					 
+					 System.out.println(i);
+					 
+				 }
 				 
 	            }
 			 
