@@ -237,7 +237,6 @@ public class Actividad4 {
         
         //EJERCICIO 10
         
-        in = new Scanner(System.in);
         
         double suma3 = 0;
         
@@ -305,19 +304,7 @@ public class Actividad4 {
         System.out.println("por debajo de la media: " + personasAbajo);
 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
        //EJERCICIO 11
         int[] array1 = new int[100];
@@ -366,7 +353,7 @@ public class Actividad4 {
 		
 		int enteros;
 		
-		String opcion = "";
+		String opcion = reader.nextLine();;
 		
 		
 		do {
@@ -377,13 +364,13 @@ public class Actividad4 {
 			System.out.println("c - salir");
 			
 			
-			opcion = reader.nextLine();
+			
 			
 			 if(opcion.equals("a")){
 				 
 				 for(int i = 0; i < clientes.length; i++) {
 					 
-					 System.out.println(i);
+					 System.out.println(clientes[i]);
 					 
 				 }
 				 
@@ -391,22 +378,29 @@ public class Actividad4 {
 			 
 	            else if(opcion.equals("b")){
 	            
-					 
+	            	for()
+	            	
 	            }
 			 
 
 	            else if(opcion.equals("c")){
-	                
+	            
+	            	
+	            	
 	            }
 			 
 	            else{
 
+	            	
+	            	
 	            }
 			
 		}while(!opcion.equals("c"));
         
         
-        
+
+		
+		
         
         
         
