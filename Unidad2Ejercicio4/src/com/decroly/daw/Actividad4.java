@@ -348,10 +348,6 @@ public class Actividad4 {
         //EJERCICIO12
         
         String [] clientes = new String [10];
-        
-		int contador = 0;
-		
-		int enteros;
 		
 		String opcion = reader.nextLine();;
 		
@@ -378,20 +374,37 @@ public class Actividad4 {
 			 
 	            else if(opcion.equals("b")){
 	            
-	            	for()
+	            	 System.out.print("Introduce la posición (0-9): ");
+	            	 
+	                 int posicion = reader.nextInt();
+	                 
+	                 System.out.print("Introduce el valor: ");
+	                 
+	                 String valor = reader.toString();
+
+	                 
+	                 if (posicion >= 0 && posicion < clientes.length) {
+	                	 
+	                     clientes[posicion] = valor;
+	                     
+	                     System.out.println("Valor " + valor + " introducido en la posición " + posicion);
+	                     
+	                 }else {
+	                	 
+	                	 System.out.println("posicion no valida");	                 }
 	            	
 	            }
 			 
 
 	            else if(opcion.equals("c")){
 	            
-	            	
+	            	System.out.println("adios.");
 	            	
 	            }
 			 
 	            else{
 
-	            	
+	            	System.out.println("la opcion no es coorecta.");
 	            	
 	            }
 			
@@ -399,10 +412,59 @@ public class Actividad4 {
         
         
 
+		//EJERCICIO 13
 		
+		System.out.print("introduce el valor V: ");
+        int V = reader.nextInt();
+
+        System.out.print("introduce el valor I: ");
+        int I = reader.nextInt();
+
+        System.out.print("introduce el valor N: ");
+        int N = reader.nextInt();
+
+        
+        int[] secuencia = new int[N];
+
+        
+        for (int i = 0; i < N; i++) {
+            secuencia[i] = V + (i * I);
+        }
+
+        
+        System.out.println("La secuencia es:");
+        
+        for (int num : secuencia) {
+        	
+            System.out.print(num + " ");
+            
+        }
 		
+        //EJERCICIO 14
         
+        int[] secval = new int[55];
+		 
+        int T = 0;
+
         
+        for (int i = 1; i <= 10; i++) {
+        	
+            for (int j = 0; j < i; j++) {
+            	
+                secval[T] = i;
+                
+                T++;
+                
+            }
+        }
+
+        
+        for (int numero : secval) {
+        	
+            System.out.print(numero);
+            
+        }
+	
         
         
         
