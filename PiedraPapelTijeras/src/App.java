@@ -82,13 +82,13 @@ System.out.println("Hola bienvenido a Piedra Papel o Tijera.");
            
 		 
             		else{
-						
+						System.out.println("escoge una opcion valida");
 						
             			}
 		
 	}while(!eleccionJugador.equals("s"));
 
-	;
+ System.out.println("has salido");	
 
 
 
