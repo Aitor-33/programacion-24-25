@@ -1,1 +1,1 @@
-https://github.com/Aitor-33/programacion-24-25
+https://github.com/Aitor-33/programacion-24-25/blob/main/PiedraPapelTijeras/src/App.java
