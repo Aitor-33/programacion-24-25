@@ -30,7 +30,6 @@ public class dawbank {
                 }else if(eleccionJugador.equals("2")){
     
                     
-                    
                 
                     }else if(eleccionJugador.equals("3")){
                         
