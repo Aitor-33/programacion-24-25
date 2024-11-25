@@ -42,10 +42,6 @@ public class movimientos {
     public void setcantidad(double cantidad) {
         if (cantidad > 0) {
             this.cantidad = cantidad;
-            
-        }else{
-            System.out.println("el numero debe de ser mayor que 0");
-            
         }
     }
     

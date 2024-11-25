@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class dawbank {
     public static void main(String[] args) throws Exception {
-        
+        //principal
         
         Scanner reader = new Scanner(System.in);	
 		
 	String eleccionJugador;
-        
+    CuentaBancaria primera = new CuentaBancaria(iban, titular, saldo, );
         
         
         do {

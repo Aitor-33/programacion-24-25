@@ -40,7 +40,7 @@ public boolean ingreso(movimientos m1){
     boolean isAdd = false;
 
     if(m1 != null){
-
+        
         this.movimiento[nelementos] = m1;
 
         this.nelementos++;
@@ -53,7 +53,7 @@ public boolean ingreso(movimientos m1){
     
 }
 
-public boolean eliminarLibro(movimientos m1){
+public boolean retirada(movimientos m1){
 
     boolean isRemoved = false;
 
