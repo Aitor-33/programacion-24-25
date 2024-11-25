@@ -22,7 +22,7 @@ public class dawbank {
             System.out.println("6 - retirada");
             System.out.println("7 - movimientos");
             System.out.println("8 - salir");
-    
+            
             System.out.println("selecciona una opcion del menu:");
             eleccionJugador = reader.nextLine();
             
