@@ -7,7 +7,10 @@ public class dawbank {
         Scanner reader = new Scanner(System.in);	
 		
 	String eleccionJugador;
-    CuentaBancaria primera = new CuentaBancaria(iban, titular, saldo, );
+
+
+
+    CuentaBancaria cuentabancaria = new CuentaBancaria(iban, titular, saldo);
         
         
         do {
@@ -20,24 +23,24 @@ public class dawbank {
             System.out.println("7 - movimientos");
             System.out.println("8 - salir");
     
-            
+            System.out.println("selecciona una opcion del menu:");
             eleccionJugador = reader.nextLine();
             
             if(eleccionJugador.equals("1")){
                 
                 
-    
-                }else if(eleccionJugador.equals("2")){
-    
-                    
                 
+                }else if(eleccionJugador.equals("2")){
+                    
+                    
+                    
                     }else if(eleccionJugador.equals("3")){
                         
                     
                     
                     }else if(eleccionJugador.equals("4")){
 
-
+                
 
 
                     }else if(eleccionJugador.equals("5")){
@@ -52,15 +55,15 @@ public class dawbank {
 
                     }else if(eleccionJugador.equals("7")){
 
+                    
 
-
-        
-        
+                        
+                        
                     }else{
                             System.out.println("escoge una opcion valida");
                             
                             }
-            
+                            
         }while(!eleccionJugador.equals("8"));
     
     System.out.println("has salido");  
@@ -68,3 +71,14 @@ public class dawbank {
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+

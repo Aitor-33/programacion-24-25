@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class CuentaBancaria {
 
 private String iban;
@@ -17,9 +19,17 @@ this.movimiento = new movimientos[nmovimientos];
 this.nelementos = 0;
 }
 
+
 public String getiban(){
     
     return this.iban;
+
+}
+
+public String toString() {
+    String info = String.format("CuentaBancaria [iban=" + iban + ", titular=" + titular + ", saldo=" + saldo + ", movimiento="
+            + Arrays.toString(movimiento) + ", nelementos=" + nelementos + "]") ;
+            return info;
 
 }
 
