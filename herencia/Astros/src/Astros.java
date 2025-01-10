@@ -6,12 +6,12 @@ public class Astros {
     private double  periodoTraslacionHoras;
     private double distanciaMedia;
 
-    public Astros(double  masaDelCuerpo, double  diametroMedio, double  períodoRotaciónHoras, double  períodoTraslaciónHoras, double  distanciaMedia) {
+    public Astros(double  masaDelCuerpo, double  diametroMedio, double  periodoRotacionHoras, double  periodoTraslacionHoras, double  distanciaMedia) {
 
         this.masaDelCuerpo = masaDelCuerpo;
         this.diametroMedio = diametroMedio;
-        this.periodoRotacionHoras = períodoRotaciónHoras;
-        this.periodoTraslacionHoras = períodoTraslaciónHoras;
+        this.periodoRotacionHoras = periodoRotacionHoras;
+        this.periodoTraslacionHoras = periodoTraslacionHoras;
         this.distanciaMedia = distanciaMedia;
 
     }
