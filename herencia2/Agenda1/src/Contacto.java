@@ -1,4 +1,4 @@
-public class Contacto extends Agenda{
+public class Contacto{
 
 private String nombre;
 private int telefono;
