@@ -1,43 +1,29 @@
 public class Contacto{
 
-private String nombre;
-private int telefono;
+    private String nombre;
+    private String telefono;
 
+    public Contacto(String nombre, String telefono) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
 
-public Contacto(String nombre, int telefono) {
+    public String getNombre() {
+        return nombre;
+    }
 
-    this.nombre = nombre;
-    this.telefono = telefono;
-    
-}
+    public String getTelefono() {
+        return telefono;
+    }
 
-public String getNombre() {
-
-    return nombre;
-
-}
-
-public int getTelefono() {
-
-    return telefono;
-
-}
-
-@Override
-public String toString() {
-
-    StringBuilder sb = new StringBuilder();
-
-    sb.append("contacto");
-
-    sb.append("el nombre del contacto es = ").append(this.nombre);
-
-    sb.append(", su numero de telefono es = ").append(this.telefono);
-
-    return sb.toString();
-
-}
-
-
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n Agenda \n");
+        sb.append("Nombre = ").append(nombre);
+        sb.append(", Numero de telefono = ").append(telefono);
+        
+        return sb.toString();
+    }
 
 }

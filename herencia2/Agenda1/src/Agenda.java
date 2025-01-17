@@ -1,27 +1,67 @@
-public class Agenda extends Contacto{
+public class Agenda{
 
-private Contacto [] listaContactos;
+    private Contacto[] contactos;
+    private int contador;
 
-public Agenda(String nombre, int telefono, Contacto[] listaContactos) {
+    public Agenda(){
 
-    super(nombre, telefono);
-    this.listaContactos = listaContactos;
+        this.contactos = new Contacto[20];
+        this.contador = 0;
+        
+    }
+    public int buscaContacto(String nombre) {
 
-}
+        for (int i = 0; i < contador; i++) {
 
-@Override
-public String toString() {
+            if (contactos[i].getNombre().equalsIgnoreCase(nombre)) {
 
-    StringBuilder sb = new StringBuilder();
+                return i;
 
-    sb.append("contacto");
+            }
+        }
 
-    sb.append("el nombre del contacto es = ").append(super.getNombre());
+        return -1;
 
-    sb.append(", su numero de telefono es = ").append(super.getTelefono()   );
+    }
 
-    return sb.toString();
+    public boolean existeContacto(String nombre) {
 
-}
+        return buscaContacto(nombre) != -1;
+
+    }
+
+
+    public boolean añadirContacto(Contacto b) {
+
+        if (existeContacto(b.getNombre())) {
+
+            return false; 
+
+        }
+
+        contactos[contador++] = b;
+
+        return true;
+
+    }
+
+    public boolean eliminarContacto(String nombre) {
+
+        for (int i = 0; i < contador; i++) {
+
+            if (contactos[i].getNombre().equalsIgnoreCase(nombre)) {
+
+                System.arraycopy(contactos, i + 1, contactos, i, contador - i - 1);
+                
+                contactos[--contador] = null;
+                return true;
+
+            }
+
+        }
+
+        return false;
+
+    }
 
 }
