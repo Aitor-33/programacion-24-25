@@ -20,7 +20,7 @@ public class Agenda {
 
         if (nombreExistente(c.getNombre())) {
 
-            System.out.println("el nombre de este contacto ya existe");
+            System.out.println("el nombre de este contacto ya existe ");
 
             return false;
 
@@ -71,8 +71,8 @@ public class Agenda {
         } else {
 
             for (int i = 0; i < contador; i++) {
-
-                System.out.println((i + 1) + ". " + contactos[i].getNombre() + " - " + contactos[i].getTelefono());
+            
+                System.out.println(contactos[i].toString());
 
             }
 

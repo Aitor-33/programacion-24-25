@@ -1,19 +1,31 @@
-import java.text.DateFormat;
 
-public class ContactoEmpresa {
+public class ContactoEmpresa extends Contacto{
 
-    private String NombreEmpresa;
-    private String TelefonoEmpresa;
-    private DateFormat Email;
+    private String PaginaWeb;
 
+public ContactoEmpresa(String nombre, String telefono, String PaginaWeb){
 
+        super(nombre, telefono);
+        this.PaginaWeb = PaginaWeb;
 
+    }
 
-
-
-
-
-
-
+    @Override
+    public String toString(){
     
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n Empresa \n ");
+        sb.append("el nombre es = ").append(super.getNombre());
+        sb.append("el telefono es = ").append(super.getTelefono());
+        sb.append("tu pagina web es = ").append(PaginaWeb);
+        
+        return sb.toString();
+    
+    }
+
+
+
+
+
+
 }

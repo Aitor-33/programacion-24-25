@@ -1,36 +1,34 @@
 
-import java.text.DateFormat;
 
-public class ContactoPersona {
-    private String NombrePersona;
-    private String TelefonoPersona;
-    private DateFormat fechaCumpleaños;
+public class ContactoPersona extends Contacto{
 
-    public ContactoPersona(String NombrePersona, String TelefonoPersona, DateFormat fechaCumpleaños){
+    private String fechaCumpleaños;
 
-        this.NombrePersona = NombrePersona;
-        this.TelefonoPersona = TelefonoPersona;
+    public ContactoPersona(String nombre, String telefono, String fechaCumpleaños){
+
+        super(nombre, telefono);
+        this.fechaCumpleaños = fechaCumpleaños;
 
     }
 
-    public String getNombrePersona() {
-
-        return NombrePersona;
-    
-    }
-
-    public String getTelefonoPersona() {
-    
-        return TelefonoPersona;
-    
-    }
-
-    public DateFormat getFechaCumpleaños() {
+    public String getFechaCumpleaños() {
     
         return fechaCumpleaños;
     
     }
 
+    @Override
+    public String toString(){
+
+    StringBuilder sb = new StringBuilder();
+    sb.append("\n Persona \n ");
+    sb.append("el nombre es = ").append(super.getNombre());
+    sb.append("el telefono es = ").append(super.getTelefono());
+    sb.append("la fecha de cumpleaños es = ").append(fechaCumpleaños);
+    
+    return sb.toString();
+
+}
 
 
 
