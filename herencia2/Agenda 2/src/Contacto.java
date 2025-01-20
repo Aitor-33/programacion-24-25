@@ -1,14 +1,7 @@
-public class Contacto {
+public abstract class Contacto {
 
-    private String nombre;
-    private String telefono;
-
-    public Contacto(String nombre, String telefono) {
-
-        this.nombre = nombre;
-        this.telefono = telefono;
-
-    }
+    protected String nombre;
+    protected String telefono;
 
     public String getNombre() {
 
@@ -28,15 +21,4 @@ public class Contacto {
 
     }
 
-    @Override
-    public String toString() {
-
-        StringBuilder sb = new StringBuilder();
-        sb.append("\n Agenda \n");
-        sb.append("el nombre es = ").append(nombre);
-        sb.append(", el numero de telefono es = ").append(telefono);
-        
-        return sb.toString();
-        
-    }
 }

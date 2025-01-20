@@ -5,7 +5,8 @@ public class ContactoEmpresa extends Contacto{
 
 public ContactoEmpresa(String nombre, String telefono, String PaginaWeb){
 
-        super(nombre, telefono);
+        this.telefono = telefono;
+        this.nombre = nombre; 
         this.PaginaWeb = PaginaWeb;
 
     }
