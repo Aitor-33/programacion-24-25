@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Programa {
     public static void main(String[] args) throws Exception {
 
-        Agenda array = new Agenda();
+Agenda array = new Agenda();
 
         Scanner reader = new Scanner(System.in);
         String opcion;
@@ -87,6 +87,10 @@ public class Programa {
             }
 
         } while (!opcion.equals("6"));
+
+
+
+
 
     }
 }

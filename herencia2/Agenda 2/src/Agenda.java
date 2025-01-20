@@ -1,9 +1,9 @@
-public class Agenda{
-
+public class Agenda {
     private Contacto[] contactos;
     private int contador;
 
     public Agenda(){
+
         this.contactos = new Contacto[50];
         this.contador = 0;
         
@@ -20,7 +20,7 @@ public class Agenda{
 
         if (nombreExistente(c.getNombre())) {
 
-            System.out.println("el nombre de este contacto ya esta en uso");
+            System.out.println("el nombre de este contacto ya existe");
 
             return false;
 
@@ -95,5 +95,4 @@ public class Agenda{
         return -1;
 
     }
-
 }

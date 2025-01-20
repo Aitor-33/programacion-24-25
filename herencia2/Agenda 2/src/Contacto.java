@@ -1,5 +1,5 @@
-public class Contacto{
-
+public class Contacto {
+    
     private String nombre;
     private String telefono;
 
@@ -39,5 +39,4 @@ public class Contacto{
         return sb.toString();
         
     }
-
 }
