@@ -81,7 +81,7 @@ public class dawbank {
                     		if(cantingreso >= 3000) {
                     		
                     			System.out.println("debe notificar este ingrso ha hacienda");
-                    			
+                    		
                     		}
                     		
                     Movimiento ingreso = new Movimiento("Ingreso",cantingreso);
@@ -91,10 +91,10 @@ public class dawbank {
     				System.out.println("este es tu saldo espues del ingreso: " + cuenta.mostrarsaldo());		
                     
                     
-                    	
+                    
                     }else if(eleccionUsuario.equals("6")){
 
-                    	System.out.println("introduce la cantidad que quieres retirar");
+                        System.out.println("introduce la cantidad que quieres retirar");
                         
                     	double cantretirada = reader.nextDouble();
                     	
