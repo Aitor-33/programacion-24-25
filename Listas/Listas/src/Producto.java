@@ -24,7 +24,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto [nombre=" + nombre + ", cantidad=" + cantidad + "]";
+        return "Producto  el nombre del producto es " + nombre + ", la cantidad de ese producto es " + cantidad;
     }
 
     public void setNombre(String nombre) {
