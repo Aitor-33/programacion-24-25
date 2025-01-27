@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -108,11 +111,146 @@ public class App {
         //apartado 8 array list
 
         System.out.println("esto es el apartado 8");
+        
+        Collections.sort(productos, Comparator.comparing(Producto::getNombre));
+
+        for (Producto t : productos){
+
+            System.out.println(t.getNombre() + t.getCantidad());
+
+        }
 
 
+        
+        //apartado 9 array list
+
+        productos.clear();
+        
+
+
+
+
+        //apartado 1 linked list 
+
+        Producto Productos1 = new Producto( "lentejas", 2);
+        Producto Productos2 = new Producto("almejas", 3);
+        Producto Productos3 = new Producto("cangrejo", 1);
+        Producto Productos4 = new Producto("colacao", 4);
+        Producto Productos5 = new Producto("bocartes", 25);
+
+
+        //apartado 2 linked list 
+
+
+        System.out.println("esto es el apartado 2");
+
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        //apartado 3 Linked list
+
+        System.out.println("esto es el apartado 3");
+
+        LinkedList<Producto> productoslinked = new LinkedList<Producto>();
+
+        productoslinked.add(Productos1);
+        productoslinked.add(Productos2);
+        productoslinked.add(Productos3);
+        productoslinked.add(Productos4);
+        productoslinked.add(Productos5);
+
+        //apartado 4 Linked list
+
+        System.out.println("esto es el apartado 4");
+
+        Iterator<Producto> iteras = productoslinked.iterator();
+        Producto cadaProductos;
+        
+        while (iteras.hasNext()){
+
+            cadaProductos = iteras.next();
+
+            System.out.println(" el nombre del producto es: " + cadaProductos.getNombre() + " /la cantidad es: " + cadaProductos.getCantidad());
+        }
+
+        //apartado 5 Linked list
+
+        System.out.println("esto es el apartado 5");
+
+        iteras = productoslinked.iterator();
+
+        while (iteras.hasNext()){
+
+            cadaProductos = iteras.next();
+
+            if (cadaProductos.getNombre().equals("colacao")) {
+            
+                iteras.remove();
+
+            }
+
+            if (cadaProductos.getNombre().equals("bocartes")) {
+                
+                iteras.remove();
+
+            }
+
+        }
+
+        for(Producto l : productoslinked){
+
+            System.out.println(l);
+
+        }
+
+        //apartado 6 Linked list
+
+        System.out.println("esto es el apartado 6");
+
+        Producto Productos6 = new Producto("pizza", 5);
+
+        productoslinked.add(2, Productos6);
+
+        iteras = productoslinked.iterator();
+
+        for(Producto l : productoslinked){
+
+            System.out.println(l);
+
+        }
+
+
+        //apartado 7 Linked list
+
+        System.out.println("esto es el apartado 7");
+
+        iteras = productoslinked.iterator();
+
+        for(Producto l : productoslinked){
+
+            System.out.println(l);
+
+        }
+
+        //apartado 8 Linked list
+
+        System.out.println("esto es el apartado 8");
+        
+        Collections.sort(productoslinked, Comparator.comparing(Producto::getNombre));
+
+        for (Producto r : productoslinked){
+
+            System.out.println(r.getNombre() + r.getCantidad());
+            
+        }
+
+        
+        //apartado 9 Linked list
+
+        productoslinked.clear();
 
 
 
 
     }
+
 }
