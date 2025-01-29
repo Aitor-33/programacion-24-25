@@ -10,9 +10,9 @@ public class App {
         do {
             System.out.println("1 - piedra");
             System.out.println("2 - papel");
-            System.out.println("3 - salir");
-            int eleccionJugador;
-            eleccionJugador = reader.nextInt();
+            System.out.println("s - salir");
+            String eleccionJugador;
+            eleccionJugador = reader.nextLine();
             
             if(eleccionJugador.equals("1")){
                 
@@ -29,7 +29,7 @@ public class App {
                             
                             }
             
-        }while(!eleccionJugador.equals("3"));
+        }while(eleccionJugador.equals("s"));
 
 
     }
