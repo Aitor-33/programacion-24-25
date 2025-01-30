@@ -31,7 +31,20 @@ if(coches.containsKey(matricula)){
 }
 }
 
+public void eliminaElemento(String matricula){
+    
+    if(coches.containsKey(matricula)){
 
+        
+    
+    }else{
+    
+        
+    
+    }
+
+
+}
 
 
 
