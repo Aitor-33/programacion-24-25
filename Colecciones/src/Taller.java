@@ -6,46 +6,75 @@ public String matricula;
 
 Map<String, Coche> coches = new HashMap<String, Coche>();
 
+public Taller(){
 
+}
 public Taller(Map<String, Coche> coches) {
+
     this.coches = coches;
-}
-
-
-public void agregarElemento(String matricula, String color, String marca){
-
-Coche coche = new Coche(color, marca);
-
-coches.put(matricula, coche);
-
-System.out.println("el coche se ha añadido");
-
-if(coches.containsKey(matricula)){
-
-    System.out.println("matricula ya usada");
-
-}else{
-
-    this.coches.put(matricula, coche);
 
 }
-}
 
-public void eliminaElemento(String matricula){
-    
-    if(coches.containsKey(matricula)){
 
-        
-    
+public void agregarCoche(String color, String marca, String matricula){
+
+    Coche coche = new Coche (color, marca);
+
+    if (coches.containsKey(matricula)){
+
+    System.out.println("La matricula ya esta ingresada");
+
     }else{
-    
-        
-    
+
+    System.out.println("Coche ingresado correctamente");
+
+    coches.put(matricula, new Coche(color, marca));
+
     }
 
+}    
 
-}
+public void eliminarCoche(String matricula){
 
+        if (coches.containsKey(matricula)) {
+
+            coches.remove(matricula);
+
+            System.out.println("el coche ha sido eliminado");
+
+        } else {
+
+            System.out.println("la matricula seleccionada no existe");
+
+        }
+
+    }
+
+    public void verMatricula() {
+
+        System.out.println(coches.keySet());
+
+    }
+
+    public void verCoche() {
+
+        for (Coche coche : coches.values()) {
+
+            System.out.println(coche);
+
+        }
+
+    }
+
+    public void verTaller() {
+
+        for (var entry : coches.entrySet()) {
+
+            System.out.println("la matricula: " + entry.getKey() + ", " + entry.getValue());
+
+        }
+
+    }
 
 
 
