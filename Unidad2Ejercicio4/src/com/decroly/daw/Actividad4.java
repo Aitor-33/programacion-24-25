@@ -33,7 +33,7 @@ public class Actividad4 {
 
         
         for(int i = 0; i < numeros.length; i++) {
-            System.out.print("Introduce el número " + (i + 1) + ": ");
+            System.out.print("Introduce el nï¿½mero " + (i + 1) + ": ");
             	numeros[i] = scanner.nextDouble();
         }
 
@@ -42,10 +42,10 @@ public class Actividad4 {
             	suma += numeros[i];
         }
 
-       
-        System.out.println("La suma de todos los números es: " + suma);
+    
+        System.out.println("La suma de todos los nï¿½meros es: " + suma);
 
-     
+    
     
 
 		
@@ -61,7 +61,7 @@ public class Actividad4 {
         
         for(int i = 0; i < numeros2.length; i++) {
             
-        	System.out.print("Introduce el número " + (i + 1) + ": ");
+        	System.out.print("Introduce el nï¿½mero " + (i + 1) + ": ");
             	
             	numeros2[i] = (int) reader.nextDouble();
         }
@@ -73,8 +73,8 @@ public class Actividad4 {
         	
         }
         
-        System.out.println("El número máximo es: " + maximo);
-        System.out.println("El número mínimo es: " + minimo);	
+        System.out.println("El nï¿½mero mï¿½ximo es: " + maximo);
+        System.out.println("El nï¿½mero mï¿½nimo es: " + minimo);	
 	
 		
      //EJERCICIO 4
@@ -88,7 +88,7 @@ public class Actividad4 {
         
         for(int i = 0; i < numeros3.length; i++) {
         	
-        	System.out.print("Introduce el número " + (i + 1) + ": ");
+        	System.out.print("Introduce el nï¿½mero " + (i + 1) + ": ");
         	numeros3[i] =  reader.nextInt();
         }
         		
@@ -209,11 +209,11 @@ public class Actividad4 {
         }
 
 
-        System.out.print("Introduce un número entre 1 y 10: ");
+        System.out.print("Introduce un nï¿½mero entre 1 y 10: ");
         
         int f = reader.nextInt();
 
-        System.out.println("El número " + f + " aparece en las posiciones:");
+        System.out.println("El nï¿½mero " + f + " aparece en las posiciones:");
         
         boolean encontrado = false;
 
@@ -221,7 +221,7 @@ public class Actividad4 {
         	
             if (numeros8[i] == f) {
             	
-                System.out.println("Posición " + i);
+                System.out.println("Posiciï¿½n " + i);
                 
                 	encontrado = true;
             }
@@ -230,7 +230,7 @@ public class Actividad4 {
 
         if (!encontrado) {
         	
-            	System.out.println("El número no se encuentra en el array");
+            	System.out.println("El nï¿½mero no se encuentra en el array");
             	
         }
 
@@ -249,7 +249,7 @@ public class Actividad4 {
         int personasArriba = 0, personasAbajo = 0;
 
 
-        System.out.print("Introduce el número de personas: ");
+        System.out.print("Introduce el nï¿½mero de personas: ");
         
         int S = scanner.nextInt();
 
@@ -362,46 +362,46 @@ public class Actividad4 {
 			
 			
 			
-			 if(opcion.equals("a")){
-				 
-				 for(int i = 0; i < clientes.length; i++) {
-					 
-					 System.out.println(clientes[i]);
-					 
-				 }
-				 
+			if(opcion.equals("a")){
+				
+				for(int i = 0; i < clientes.length; i++) {
+					
+					System.out.println(clientes[i]);
+					
+				}
+				
 	            }
-			 
+			
 	            else if(opcion.equals("b")){
 	            
-	            	 System.out.print("Introduce la posición (0-9): ");
-	            	 
-	                 int posicion = reader.nextInt();
-	                 
-	                 System.out.print("Introduce el valor: ");
-	                 
-	                 String valor = reader.toString();
+	            	System.out.print("Introduce la posiciï¿½n (0-9): ");
+	            	
+	                int posicion = reader.nextInt();
+	                
+	                System.out.print("Introduce el valor: ");
+	                
+	                String valor = reader.toString();
 
-	                 
-	                 if (posicion >= 0 && posicion < clientes.length) {
-	                	 
-	                     clientes[posicion] = valor;
-	                     
-	                     System.out.println("Valor " + valor + " introducido en la posición " + posicion);
-	                     
-	                 }else {
-	                	 
-	                	 System.out.println("posicion no valida");	                 }
+	                
+	                if (posicion >= 0 && posicion < clientes.length) {
+	                	
+	                    clientes[posicion] = valor;
+	                    
+	                    System.out.println("Valor " + valor + " introducido en la posiciï¿½n " + posicion);
+	                    
+	                }else {
+	                	
+	                	System.out.println("posicion no valida");	                 }
 	            	
 	            }
-			 
+			
 
 	            else if(opcion.equals("c")){
 	            
 	            	System.out.println("adios.");
 	            	
 	            }
-			 
+			
 	            else{
 
 	            	System.out.println("la opcion no es coorecta.");
@@ -443,7 +443,7 @@ public class Actividad4 {
         //EJERCICIO 14
         
         int[] secval = new int[55];
-		 
+		
         int T = 0;
 
         
