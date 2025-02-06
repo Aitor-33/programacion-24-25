@@ -49,11 +49,12 @@ catch (ArithmeticException b){
 
 //Ejercicio 3
 
-try {
+
 
 double [] vector = new double [5];
 
     for(int i = 0; i < vector.length; i++) {
+        try {
         System.out.println("introduzca los numeros del vector");
         vector[i] = reader.nextDouble();
 
@@ -61,18 +62,18 @@ double [] vector = new double [5];
         double division = reader.nextDouble();
 
         System.out.println(vector[2]/division);
+    } catch (InputMismatchException d) {
 
+        System.out.println("valor erroneo introduzca un numero");
+    
+    }catch (ArithmeticException l) {
+    
+        System.out.println("error de calculo introduzca una operacion que sea valida");
+    
+    }
 }
 
-} catch (InputMismatchException d) {
 
-    System.out.println("valor erroneo introduzca un numero");
-
-}catch (ArithmeticException l) {
-
-    System.out.println("error de calculo introduzca una operacion que sea valida");
-
-}
 
 //Ejercicio 4
 
@@ -81,6 +82,7 @@ try {
 
 
 } catch (Exception e) {
+
 
 
 }
