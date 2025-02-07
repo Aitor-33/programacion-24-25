@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args){
 
-
+        
 //Ejercicio 1
 
 Scanner reader = new Scanner(System.in);
@@ -79,6 +79,11 @@ double [] vector = new double [5];
 
 try {
 
+System.out.println("introduce el numero p");
+int p = reader.nextInt();
+
+System.out.println("introduce el numero n");
+int n = reader.nextInt();
 
 
 } catch (Exception e) {
