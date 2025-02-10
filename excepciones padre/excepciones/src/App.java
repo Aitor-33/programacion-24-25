@@ -75,23 +75,6 @@ double [] vector = new double [5];
 
 
 
-//Ejercicio 4
-
-try {
-
-System.out.println("introduce el numero p");
-int p = reader.nextInt();
-
-System.out.println("introduce el numero n");
-int n = reader.nextInt();
-
-
-} catch (Exception e) {
-
-
-
-}
-
 
 
 
