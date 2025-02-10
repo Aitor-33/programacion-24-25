@@ -26,7 +26,7 @@ public class Gato {
 
         if (nombre == null || nombre.length() < 3){
 
-            throw new Exception ("El nombre debe tener minimo 3 caracteres");
+            throw new Exception ("nombre demasiado corto debe tener almenos 3 caracteres");
 
         }
 
@@ -38,11 +38,24 @@ public class Gato {
 
         if (edad < 0){
 
-            throw new Exception ("La edad no puede ser negativa");
+            throw new Exception ("no puede haber una edad negativa");
 
         }
 
         this.edad = edad;
-        
+
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Gato");
+        sb.append("el nombre del gato es: ").append(nombre);
+        sb.append(", la edad del gato es: ").append(edad);
+
+        return sb.toString();
+
     }
 }
