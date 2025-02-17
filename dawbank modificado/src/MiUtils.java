@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,7 +16,6 @@ public class MiUtils {
         System.out.println(mensaje);
     }
 
-
     public static String leerTextoPantalla(String mensaje){
         Scanner reader = new Scanner(System.in);
         System.out.println(mensaje);
@@ -22,9 +23,7 @@ public class MiUtils {
         return valor;
     }
 
-
-    public static boolean comprobarPatron(String patron, String texto)
-    {
+    public static boolean comprobarPatron(String patron, String texto){
         boolean isOk = false;
         Pattern pat = Pattern.compile(patron); //"[0-9]{7,8}[A-Za-z]"
         Matcher mat = pat.matcher(texto);
@@ -44,4 +43,14 @@ public class MiUtils {
         } while (!isOk);
         return texto;
     }
+
+    public static LocalDate leerFecha(String mensaje){
+        Scanner reader = new Scanner(System.in);
+        DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println("\nEscribe tu fecha de nacimiento en formato DD/MM/AAAA");
+        String fecha = reader.next();
+        LocalDate fechaLocalDate = LocalDate.parse(fecha, formatter);
+        return fechaLocalDate;
+}
+
 }

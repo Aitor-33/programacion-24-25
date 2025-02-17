@@ -1,4 +1,5 @@
-import java.sql.Date;
+
+import java.time.LocalDate;
 
 public class Cliente extends Persona{
 
@@ -6,7 +7,7 @@ public String nTelefono;
 public String email;
 public String direccion;
 
-public Cliente(String nombre, String dni, Date fechaNacimiento, String nTelefono, String email, String direccion) {
+public Cliente(String nombre, String dni, LocalDate fechaNacimiento, String nTelefono, String email, String direccion) {
 
     super(nombre, dni, fechaNacimiento);
     this.nTelefono = nTelefono;

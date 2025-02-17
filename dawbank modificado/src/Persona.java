@@ -1,14 +1,14 @@
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Persona {
 
 public String nombre;
 public String dni;
-public Date FechaNacimiento;
+public LocalDate FechaNacimiento;
 
 
-public Persona(String nombre, String dni, Date fechaNacimiento) {
+public Persona(String nombre, String dni, LocalDate fechaNacimiento) {
     this.nombre = nombre;
     this.dni = dni;
     FechaNacimiento = fechaNacimiento;
@@ -26,10 +26,10 @@ public String getDni() {
 public void setDni(String dni) {
     this.dni = dni;
 }
-public Date getFechaNacimiento() {
+public LocalDate getFechaNacimiento() {
     return FechaNacimiento;
 }
-public void setFechaNacimiento(Date fechaNacimiento) {
+public void setFechaNacimiento(LocalDate fechaNacimiento) {
     FechaNacimiento = fechaNacimiento;
 }
 
