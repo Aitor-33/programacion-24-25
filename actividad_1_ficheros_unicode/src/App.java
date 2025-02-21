@@ -1,8 +1,10 @@
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);	
 		
@@ -10,6 +12,7 @@ public class App {
 		
         ArrayList<Producto> productos = new ArrayList<Producto>();
         do {
+            reader = new Scanner(System.in);
             System.out.println("1 - Crear producto");
             System.out.println("2 - Mostrar productos existentes");
             System.out.println("3 - Eliminar producto por código");
@@ -27,7 +30,7 @@ public class App {
                 int cantidad = reader.nextInt();
 
                 System.out.println("introduzca el precio del producto: ");
-                int precio = reader.nextInt();
+                double precio = reader.nextDouble();
 
                 Producto p = new Producto(cantidad, nombre, precio);
                 
@@ -62,10 +65,24 @@ public class App {
                         System.out.println("el producto se elimino");
 
                     }else if(eleccionUsuario.equals("4")){
-                    
 
-                    
-                    }  
+                        try(PrintWriter writer = new PrintWriter(new FileWriter("./resources/arhcivo.dat", false))){
+
+                            for(Producto p : productos){
+
+                                String comand = " el codigo del producto es: " + p.getCodigo() + " el nombre del producto es: " + p.getNombre() + " la cantidad del producto es: " 
+                                + p.getCantidad() + " el precio del producto es: " + p.getPrecio() + " euros";
+
+                                writer.println(comand);
+
+                            }
+
+
+                        }catch(Exception e){
+
+                        }
+                    }
+
         }while(!eleccionUsuario.equals("5"));
     
     System.out.println("has salido");  

@@ -2,10 +2,10 @@ public class Producto {
 private int codigo;
 private String nombre;
 private int cantidad;
-private int precio;
+private double precio;
 private static int contador = 0;
 
-    public Producto(int cantidad, String nombre, int precio) {
+    public Producto(int cantidad, String nombre, double precio) {
         this.cantidad = cantidad;
         this.codigo = contador;
         this.contador++;
@@ -37,7 +37,7 @@ private static int contador = 0;
         this.cantidad = cantidad;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -57,10 +57,11 @@ private static int contador = 0;
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Producto ");
-        sb.append("codigo=").append(codigo);
-        sb.append(", nombre=").append(nombre);
-        sb.append(", cantidad=").append(cantidad);
-        sb.append(", precio=").append(precio);
+        sb.append(" codigo del producto = ").append(codigo);
+        sb.append(", nombre del producto = ").append(nombre);
+        sb.append(", cantidad del producto = ").append(cantidad);
+        sb.append(", precio del producto = ").append(precio);
+        sb.append(" euros");
         
         return sb.toString();
     }
