@@ -67,20 +67,21 @@ public class App {
 
                     }else if(eleccionUsuario.equals("4")){
 
-                        try (FileOutputStream fichero = new FileOutputStream("src\\resources\\almacenes.dat"); DataOutputStream escritor = new DataOutputStream(fichero)) {
+                        try (FileOutputStream archivo = new FileOutputStream("src\\resources\\almacenes.dat"); DataOutputStream writter = new DataOutputStream(archivo)) {
 
                             for (Producto prodructo : productos) {
 
-                                escritor.writeInt(prodructo.getCodigo());
-                                escritor.writeUTF(prodructo.getNombre());
-                                escritor.writeInt(prodructo.getCantidad());
-                                escritor.writeDouble(prodructo.getPrecio());
+                                writter.writeInt(prodructo.getCodigo());
+                                writter.writeUTF(prodructo.getNombre());
+                                writter.writeInt(prodructo.getCantidad());
+                                writter.writeDouble(prodructo.getPrecio());
 
                             }
 
                         } catch (Exception e) {
 
                             System.out.println(e.getMessage());
+                            System.out.println("oh parece que algo ha ido mal");
 
                         }
                         
