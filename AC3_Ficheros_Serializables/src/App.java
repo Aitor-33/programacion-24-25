@@ -1,6 +1,10 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class App {
@@ -56,16 +60,42 @@ public class App {
                         
                         reader = new Scanner(System.in);
                         System.out.println("introduzca el ISBN del libro: ");
-                        int ISBN = reader.nextInt();
+                        int isbn = reader.nextInt();
 
+                        Libro eliminalibro = null;
+                        for (Libro Lib : libros) {
+                            if(Objects.equals(Lib.getISBN(), isbn)){
+                                eliminalibro = Lib;
+                            }
+                        }
+
+                        libros.remove(eliminalibro);
+                        System.out.println("el producto ");
 
                     }else if(eleccionUsuario.equals("4")){
+                    
+                        try (FileOutputStream file = new FileOutputStream("./Resources/Biblioteca.dat", true); ObjectOutputStream buffer = new ObjectOutputStream(file)) {
 
+                            buffer.writeObject(libros);
+
+                            System.out.println("los libros han sido guardados exitosamente");
+                                } catch (IOException e) {
+                                System.out.println("Se produjo un error " + e.getMessage());
+                            }
 
                         
                     }
         }while(!eleccionUsuario.equals("5"));
-    
+
+            try (FileOutputStream file = new FileOutputStream("./Resources/Biblioteca.dat", true); ObjectOutputStream buffer = new ObjectOutputStream(file)) {
+
+                    buffer.writeObject(libros);
+
+                    System.out.println("los libros han sido guardados correctamente.");
+                } catch (IOException e) {
+                    System.out.println("Se produjo un error " + e.getMessage());
+                }
+            
     System.out.println("has salido");  
 
 
