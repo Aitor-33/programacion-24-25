@@ -12,16 +12,18 @@ public class Producto {
     int descuento;
     int iva;
 
-    public Producto(int cantidad, int tipo, String referencia, double precio, String descripcion, int descuento, int id, int iva, String nombre) {
-        this.cantidad = cantidad;
-        this.tipo = tipo;
+    public Producto(String referencia, int id, int tipo, String nombre, String descripcion, double precio, int cantidad, int descuento, int iva) {
+
         this.referencia = referencia;
-        this.precio = precio;
-        this.descripcion = descripcion;
-        this.descuento = descuento;
         this.id = id;
-        this.iva = iva;
+        this.tipo = tipo;
         this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.descuento = descuento;
+        this.iva = iva;
+
     }
 
     public String getDescripcion() {
@@ -62,18 +64,16 @@ public class Producto {
 
     @Override
     public String toString() {
-
         return "Producto{" +
-                "cantidad=" + cantidad +
+                "referencia='" + referencia + '\'' +
                 ", id=" + id +
-                ", referencia='" + referencia + '\'' +
+                ", tipo=" + tipo +
                 ", nombre='" + nombre + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", tipo=" + tipo +
                 ", precio=" + precio +
+                ", cantidad=" + cantidad +
                 ", descuento=" + descuento +
                 ", iva=" + iva +
                 '}';
-
     }
 }
