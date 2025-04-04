@@ -41,17 +41,52 @@ public class Main {
 
 
             }else if(eleccionJugador.equals("2")){
+                reader = new Scanner(System.in);
+                System.out.println("\nescribe la referencia del producto");
+                String referencia = reader.nextLine();
 
+                List<Producto> products = miDataPrueba.buscarProductoReferencia(referencia);
+
+                for(Producto c : products){
+                    System.out.println(c);
+                }
 
             }else if(eleccionJugador.equals("3")){
 
 
 
             }else if(eleccionJugador.equals("4")){
+                reader = new Scanner(System.in);
+                System.out.println("\nescribe la cantidad del producto");
+                int cantidad = reader.nextInt();
 
+                List<Producto> products = miDataPrueba.buscarProductocantidad(cantidad);
+
+                for(Producto c : products){
+                    System.out.println(c);
+                }
 
             }else if(eleccionJugador.equals("5")){
+                System.out.println("\nescribe la cantidad del producto");
+                String referencia = reader.nextLine();
 
+                System.out.println("\nescribe la cantidad del producto");
+                String nombre = reader.nextLine();
+
+                System.out.println("\nescribe la cantidad del producto");
+                String descripcion = reader.nextLine();
+
+                System.out.println("\nescribe la cantidad del producto");
+                int cantidad = reader.nextInt();
+
+                System.out.println("\nescribe la cantidad del producto");
+                double precio = reader.nextDouble();
+
+                System.out.println("\nescribe la cantidad del producto");
+                int descuento = reader.nextInt();
+
+                System.out.println("\nescribe la cantidad del producto");
+                boolean aplicar_dto = reader.nextBoolean();
 
 
             }else if(eleccionJugador.equals("6")){

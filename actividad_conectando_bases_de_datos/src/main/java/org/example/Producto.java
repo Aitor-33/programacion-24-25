@@ -11,8 +11,9 @@ public class Producto {
     double precio;
     int descuento;
     int iva;
+    boolean aplicar_dto;
 
-    public Producto(String referencia, int id, int tipo, String nombre, String descripcion, double precio, int cantidad, int descuento, int iva) {
+    public Producto(String referencia, int id, int tipo, String nombre, String descripcion, double precio, int cantidad, int descuento, int iva, boolean aplicar_dto) {
 
         this.referencia = referencia;
         this.id = id;
@@ -23,6 +24,7 @@ public class Producto {
         this.cantidad = cantidad;
         this.descuento = descuento;
         this.iva = iva;
+        this.aplicar_dto = aplicar_dto;
 
     }
 
@@ -60,6 +62,50 @@ public class Producto {
 
     public int getTipo() {
         return tipo;
+    }
+
+    public boolean isAplicar_dto() {
+        return aplicar_dto;
+    }
+
+    public void setAplicar_dto(boolean aplicar_dto) {
+        this.aplicar_dto = aplicar_dto;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public void setDescuento(int descuento) {
+        this.descuento = descuento;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setIva(int iva) {
+        this.iva = iva;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
 
     @Override
