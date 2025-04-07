@@ -1,19 +1,39 @@
 package org.example;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SQLDataBaseManager {
 
-private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-private static final String URL = "jdbc:mysql://localhost:3306/";
-private static final String SCHEMA = "bases_anuar";
-private static final String USUARIO = "developer2";
-private static final String CLAVE = "Decroly00";
+private static String DRIVER ;
+private static String URL ;
+private static String SCHEMA ;
+private static String USUARIO ;
+private static String CLAVE;
 
     public static Connection getConnection(){
         Connection connection = null;
+
+        try(FileReader fichero = new FileReader("recursos/aplication.dat");
+            BufferedReader lector = new BufferedReader(fichero)) {
+            String linea = lector.readLine();
+            while (linea != null) {
+                String[] credenciales = linea.split(",");
+                DRIVER = credenciales[0];
+                URL = credenciales[1];
+                SCHEMA = credenciales[2];
+                USUARIO = credenciales[3];
+                CLAVE = credenciales[4];
+
+                linea = lector.readLine();
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error al leer el fichero de credenciales: " + e.getMessage());
+        }
 
         try {
             Class.forName(DRIVER);

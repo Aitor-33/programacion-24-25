@@ -117,13 +117,13 @@ public class Main {
             }else if(eleccionJugador.equals("7")){
 
                 System.out.println("Vamos a actualizar un producto");
-                List<Producto> todosProductos5 = miDataPrueba.getMostrartodos();
+                List<Producto> todosProductos5 = miDataPrueba.getListaProductos();
                 for (Producto p : todosProductos5) {
                     System.out.println("Nombre: " + p.getNombre() + " / Referencia: " + p.getReferencia());
                 }
                 System.out.println("Escriba la referencia del producto que quieras actualizar: ");
                 String referencia4 = reader.nextLine();
-                List<Producto> invUpdate = miDataPrueba.getBuscarReferencia(referencia4);
+                List<Producto> invUpdate = miDataPrueba.buscarProductoReferencia(referencia4);
 
                 Producto productoActualizado = invUpdate.get(0);
                 System.out.println("Escriba la nueva descripcion del producto: ");
@@ -149,7 +149,7 @@ public class Main {
                 productoActualizado.setPrecio(precio2);
                 productoActualizado.setDescuento(descuento2);
                 productoActualizado.setAplicar_dto(tieneDescuento2);
-                miData.actualizarProducto(productoActualizado);
+                miDataPrueba.actualizarProducto(productoActualizado);
 
             }else if(eleccionJugador.equals("8")){
 
