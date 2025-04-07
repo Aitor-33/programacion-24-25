@@ -22,7 +22,7 @@ public class SQLAcces {
                 lista.add(resultSet.getString("nombre"));
             }
         } catch (Exception e) {
-            System.out.println("Error al obtener la lista de personas: " + e.getMessage());
+            System.out.println("Error al obtener la lista de productos: " + e.getMessage());
         }
 
         return lista;
@@ -59,7 +59,7 @@ public class SQLAcces {
             }
 
         } catch (Exception e) {
-            System.out.println("Error al obtener la lista de personas: " + e.getMessage());
+            System.out.println("Error al obtener la lista de productos: " + e.getMessage());
         }
         return lista;
     }
@@ -94,7 +94,7 @@ public class SQLAcces {
             }
 
         } catch (Exception e) {
-            System.out.println("Error al obtener la lista de personas: " + e.getMessage());
+            System.out.println("Error al obtener la lista de productos: " + e.getMessage());
         }
         return productos;
     }
@@ -129,8 +129,107 @@ public class SQLAcces {
 
 
         } catch (Exception e) {
-            System.out.println("Error al obtener la lista de personas: " + e.getMessage());
+            System.out.println("Error al obtener la lista de productos: " + e.getMessage());
         }
         return responses;
     }
+
+    public List buscarProductoTipo(int ListaProductos){
+        List<Producto> productos = new LinkedList<>();
+
+        String getProductoCantidad = "SELECT * FROM producto WHERE tipo_id = ?";
+
+        try (Connection connection = SQLDataBaseManager.getConnection();
+             PreparedStatement statement = connection.prepareStatement(getProductoCantidad);) {
+            statement.setInt(1, ListaProductos);
+            ResultSet resultSet = statement.executeQuery();
+
+
+            while (resultSet.next()) {
+
+                String referencia = resultSet.getNString(2);
+                int id = resultSet.getInt(1);
+                int tipo_id = resultSet.getInt(10);
+                String nombre = resultSet.getNString(3);
+                String descrpcion = resultSet.getNString(4);
+                Double precio = resultSet.getDouble(6);
+                int cantidad = resultSet.getInt(5);
+                int descuento = resultSet.getInt(7);
+                int iva = resultSet.getInt(8);
+                boolean aplicar_dto = resultSet.getBoolean(9);
+
+                Producto c1 =  new Producto(referencia, id, tipo_id, nombre, descrpcion, precio, cantidad, descuento, iva, aplicar_dto);
+                productos.add(c1);
+
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error al obtener la lista de productos: " + e.getMessage());
+        }
+        return productos;
+    }
+
+
+    public int  eliminarProductoReferencia(String referencia){
+        int responses = -1;
+
+        String eliminarProductosReferencia = "DELETE FROM producto WHERE referencia = ?";
+
+        try (Connection connection = SQLDataBaseManager.getConnection();
+             PreparedStatement statement = connection.prepareStatement(eliminarProductosReferencia);) {
+
+
+                statement.setString(1, referencia);
+
+                responses = statement.executeUpdate();
+
+
+
+
+        } catch (Exception e) {
+            System.out.println("Error al obtener la lista de productos: " + e.getMessage());
+        }
+        return responses;
+    }
+
+    public int insertarTipo(Tipo tipo) {
+
+        int responses = -1;
+
+        String insertaruntipo = "INSERT INTO tipo (nombre) \n" +
+                "VALUES (?);";
+
+        try (Connection connection = SQLDataBaseManager.getConnection();
+             PreparedStatement statement = connection.prepareStatement(insertaruntipo);) {
+
+            statement.setString(2,tipo.getNombre());
+
+            responses = statement.executeUpdate();
+
+        } catch (Exception e) {
+            System.out.println("Error al obtener la lista de tipos: " + e.getMessage());
+        }
+        return responses;
+    }
+
+    public int actualizarProducto(Producto producto) {
+        int response = -1;
+        String sql = "UPDATE Inventario set Descripcion = ?, Cantidad = ?, Precio = ?, Descuento = ?, AplicarDto = ? WHERE Referencia = ?";
+        try(Connection connection = SQLDataBaseManager.getConnection(); PreparedStatement statement3 = connection.prepareStatement(sql);){
+
+            statement3.setNString(1, producto.getDescripcion());
+            statement3.setInt(2,producto.getCantidad());
+            statement3.setDouble(3,producto.getPrecio());
+            statement3.setDouble(4,producto.getDescuento());
+            statement3.setBoolean(5,producto.isAplicar_dto());
+            statement3.setNString(6, producto.getReferencia());
+
+            statement3.executeUpdate();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return response;
+    }
+
+
 }
