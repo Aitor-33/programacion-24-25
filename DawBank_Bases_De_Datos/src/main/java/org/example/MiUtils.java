@@ -16,6 +16,7 @@ public class MiUtils {
     }
 
     public static void imprimir(String mensaje){
+
         System.out.println(mensaje);
     }
 
