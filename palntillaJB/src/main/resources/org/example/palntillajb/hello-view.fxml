@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.palntillajb.HelloController">
+    <children>
+        <VBox fx:id="registrarMascotaPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" visible="false">
+            <children>
+                <HBox fx:id="titlePanel" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Registro nueva mascota" textAlignment="CENTER">
+                            <font>
+                                <Font name="Impact" size="34.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="900.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Separator>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0">
+                    <children>
+                        <TextField fx:id="pasaporteRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="Id">
+                            <HBox.margin>
+                                <Insets left="150.0" top="30.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="nombreMascotaRegisterField" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="Nombre">
+                            <HBox.margin>
+                                <Insets left="-600.0" top="90.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="FnacimientoRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="Descripcion">
+                            <HBox.margin>
+                                <Insets left="-600.0" top="150.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="pesoRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="Precio">
+                            <HBox.margin>
+                                <Insets left="-600.0" top="210.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <ComboBox fx:id="propietarioRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="600.0" promptText="propietario">
+                            <HBox.margin>
+                                <Insets left="-600.0" top="350.0" />
+                            </HBox.margin>
+                        </ComboBox>
+                        <Button fx:id="registrarMascotaBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#unRegistrarMascotabtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: green;" text="Registrar mascota" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Black" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="-375.0" top="420.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                  <TextField fx:id="tipoMascotaRegisterField" layoutX="160.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="Precio">
+                     <HBox.margin>
+                        <Insets left="-375.0" top="280.0" />
+                     </HBox.margin>
+                  </TextField>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox fx:id="tablaPanel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" visible="false">
+            <children>
+                <HBox prefHeight="73.0" prefWidth="900.0">
+                    <children>
+                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Tabla de mascotas" textAlignment="CENTER">
+                            <font>
+                                <Font name="Impact" size="34.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <ListView fx:id="listaProductosView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0">
+                    <VBox.margin>
+                        <Insets left="50.0" />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                    </cursor>
+                </ListView>
+                <Button fx:id="editarProductoBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#editarProducto" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="12.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </VBox>
+      <VBox fx:id="registrarPropietarioPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" visible="false">
+         <children>
+            <HBox fx:id="titlePanel1" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Registro nuevo propietario" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="900.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Separator>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0">
+               <children>
+                  <TextField fx:id="nombrePRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="nombre">
+                     <HBox.margin>
+                        <Insets left="150.0" top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="ApellidoPRegisterField" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="apellidos">
+                     <HBox.margin>
+                        <Insets left="-600.0" top="90.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="dniPRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="DNI">
+                     <HBox.margin>
+                        <Insets left="-600.0" top="150.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="telefonoPRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="telefono">
+                     <HBox.margin>
+                        <Insets left="-600.0" top="210.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="registrarPropietarioBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onregistrarPropietarioBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: green;" text="Registrar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-375.0" top="350.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="direccionPRegisterField" layoutX="160.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="direccion">
+                     <HBox.margin>
+                        <Insets left="-375.0" top="260.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="emailPRegisterField" layoutX="160.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="email">
+                     <HBox.margin>
+                        <Insets left="-600.0" top="310.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="registrarConsultaPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" visible="false">
+         <children>
+            <HBox fx:id="titlePanel11" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Registro nueva consulta" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="900.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Separator>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0">
+               <children>
+                  <TextField fx:id="fechaCRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="fecha">
+                     <HBox.margin>
+                        <Insets left="150.0" top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="duracionCRegisterField" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="duracion">
+                     <HBox.margin>
+                        <Insets left="-600.0" top="90.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="observacionCRegisterField11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="observaciones">
+                     <HBox.margin>
+                        <Insets left="-600.0" top="150.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="MascotaCRegisterField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0" promptText="Precio">
+                     <HBox.margin>
+                        <Insets left="-600.0" top="210.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="registrarConsultaBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onregistrarConsultaBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: green;" text="Registrar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-375.0" top="350.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="VBoxPrincipal" prefHeight="600.0" prefWidth="900.0" visible="false">
+         <children>
+            <HBox alignment="CENTER" prefHeight="420.0" prefWidth="900.0">
+               <children>
+                  <Button fx:id="botonARMascota" mnemonicParsing="false" onMouseClicked="#onbotonARMascota" prefHeight="64.0" prefWidth="137.0" text="registrar mascota" />
+                  <Button fx:id="botonARPropietario" mnemonicParsing="false" onMouseClicked="#onbotonARPropietario" prefHeight="65.0" prefWidth="137.0" text="registrar propietario">
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="415.0" prefWidth="900.0">
+               <children>
+                  <Button fx:id="botonARConsulta" mnemonicParsing="false" onMouseClicked="#onbotonARConsulta" prefHeight="65.0" prefWidth="138.0" text="registrar consulta" />
+                  <Button fx:id="botonABMascota" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onbotonABMascota" prefHeight="65.0" prefWidth="136.0" text="buscar mascota">
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="445.0" prefWidth="900.0">
+               <children>
+                  <Button fx:id="botonExportar" mnemonicParsing="false" onAction="#botonExportar" onMouseClicked="#onbotonExportar" prefHeight="65.0" prefWidth="137.0" text="exportar datos" />
+                  <Button fx:id="BotonSalir" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onBotonSalir" prefHeight="65.0" prefWidth="137.0" text="salir de la app">
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="tablaPropietariosPanel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" visible="false">
+         <children>
+            <HBox prefHeight="73.0" prefWidth="900.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Tabla de propietarios" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="34.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="listaProductosView1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+            </ListView>
+            <Button fx:id="editarPropietariosBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#editarProducto" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="tablaConsultasPanel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <HBox prefHeight="73.0" prefWidth="900.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Tabla de consultas" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="34.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="listaConsultasView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+            </ListView>
+            <Button fx:id="editarConsultasBtn" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#editarProducto" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
