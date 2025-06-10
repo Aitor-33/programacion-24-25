@@ -1,13 +1,12 @@
-package org.example.palntillajb.model;
+package org.example.repaso_examen;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class SQLDataBaseManager {
+public class SQLDatabaseManager {
     private static String DRIVER ;
     private static String URL ;
     private static String SCHEMA ;
@@ -17,7 +16,7 @@ public class SQLDataBaseManager {
     public static Connection getConnection(){
         Connection connection = null;
 
-        try(FileReader fichero = new FileReader("src/main/java/org/example/palntillajb/model/credentials.dat");
+        try(FileReader fichero = new FileReader("src/main/java/org/example/repaso_examen/aplication.dat");
             BufferedReader lector = new BufferedReader(fichero)) {
             String linea = lector.readLine();
             while (linea != null) {
@@ -44,7 +43,6 @@ public class SQLDataBaseManager {
         } catch (SQLException e) {
             System.out.println("Error de SQL: " + e.getMessage());
         }
-
         return connection;
     }
 }
