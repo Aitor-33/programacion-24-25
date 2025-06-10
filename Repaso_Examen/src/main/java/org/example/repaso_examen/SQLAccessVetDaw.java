@@ -215,7 +215,7 @@ public class SQLAccessVetDaw {
         try(Connection connection = SQLDatabaseManager.getConnection();
             PreparedStatement statement = connection.prepareStatement(añadirConsultas);) {
 
-            statement.setDate(1, consulta.getFecha());
+            statement.setDate(1, (new Date(consulta.getFecha())));
             statement.setInt(2, consulta.getDuracion());
             statement.setNString(3, consulta.getObservaciones());
             statement.setNString(4, consulta.getMascota().getPasaporte());
