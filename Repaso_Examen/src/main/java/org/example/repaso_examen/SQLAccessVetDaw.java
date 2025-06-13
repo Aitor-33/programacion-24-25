@@ -147,6 +147,51 @@ public class SQLAccessVetDaw {
 
 
 
+    //buscar mascota por pasaporte
+    public List<Mascota> getMascotaPorPropietarioDni(String dniPropietario) {
+        List<Mascota> mascota = new LinkedList<>();
+
+        String getMascotasPropietarioDni = "SELECT m.* , p.* , t.tipo FROM Mascota m  " +
+                "JOIN Propietario p ON m.Propietario_dni = p.dni " +
+                "JOIN tipo t on t.idTipo = m.Tipo_idTipo " +
+                "WHERE p.dni = ?";
+
+        try (Connection connection = SQLDatabaseManager.getConnection(); Statement statement = connection.createStatement();
+             PreparedStatement statement1 = connection.prepareStatement(getMascotasPropietarioDni);) {
+
+            statement1.setString(1, dniPropietario);
+            ResultSet dataSet = statement1.executeQuery();
+
+            while (dataSet.next()) {
+
+                Mascota m = new Mascota(
+
+                        dataSet.getNString(2), //nombre
+                        dataSet.getNString(1), //pasaporte
+                        LocalDate.from(dataSet.getDate(4).toLocalDate()), //fecha de nacimiento
+                        dataSet.getDouble(3), //peso
+
+                        new Propietario(dataSet.getNString(8),
+                                dataSet.getNString(9),
+                                dataSet.getNString(10),
+                                dataSet.getNString(11),
+                                dataSet.getNString(12),
+                                dataSet.getNString(13)),//objeto propietario
+
+                        new Tipo(dataSet.getNString(7), dataSet.getInt(6))//objeto tipo
+
+                );
+                mascota.add(m);
+
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
+        return mascota;
+    }
+
 
 
     //insertar propietario
@@ -229,4 +274,7 @@ public class SQLAccessVetDaw {
         return response;
     }
 //localdatetime que nos devuelve la base de datos se puede pasar a long con un ofEpochSecond(consulta.getFecha(), nanosecond 0 zoneoff.UTC)
+//si utilizamos long sumamos 3600 segundos que son una hora debido a que normalmente nos da otra franja horaria.
+
+
 }

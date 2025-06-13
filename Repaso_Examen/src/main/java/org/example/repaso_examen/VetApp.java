@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 public class VetApp extends Application {
     @Override
@@ -36,6 +37,13 @@ public class VetApp extends Application {
                 Mascota m = vetDawAccess.getMascotaPorPasaporte("P00000007");
                 System.out.println("FILTRO DE MASCOTA");
                 System.out.println(m);
+
+
+                List<Mascota> mascotas = vetDawAccess.getMascotaPorPropietarioDni("12345678C");
+                for(Mascota m2 : mascotas){
+                    System.out.println(m2);
+
+                }
 
 
                 launch();

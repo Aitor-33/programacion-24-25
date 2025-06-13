@@ -6,7 +6,8 @@ import java.time.LocalDateTime;
 
 public class Consulta implements Serializable {
 
-    private static final long serialVersionUID = -2289621426918320550L;
+
+    private static final long serialVersionUID = -4284470131158026058L;
 
     private long fecha;
     private int duracion;
